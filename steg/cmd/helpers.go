@@ -39,7 +39,7 @@ func CopyTemplate(fileName string) string {
 
 	fileName = strings.Split(fileName, ".")[0] + "1.gif"
 
-	ioutil.WriteFile(fileName, ReadData("base.gif"), 0644)
+	ioutil.WriteFile(fileName, getGIFHeader(), 0644)
 
 	return fileName
 
